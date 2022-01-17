@@ -31,6 +31,19 @@ RUN apt-get install -y wget && \
 	apt-get update -y && \
 	apt-get upgrade -y 
 
+# Add Kali package sources to /etc/apt/sources and import the public key
+# This allows for installing tools normally distributed with the Kali Linux OS using apt
+RUN apt-get install -y gnupg && \
+    apt-key adv --recv-keys --keyserver keyserver.ubuntu.com ED444FF07D8D0BF6 && \
+    echo "deb http://http.kali.org/kali kali-rolling main contrib non-free" >> /etc/apt/sources.list && \
+    echo "# For source package access, uncomment the following line" >> /etc/apt/sources.list && \
+    echo "# deb-src http://http.kali.org/kali kali-rolling main contrib non-free" >> /etc/apt/sources.list && \
+    echo "# For source package access, uncomment the following line" >> /etc/apt/sources.list && \
+    echo "deb http://old.kali.org/kali moto main non-free contrib" >> /etc/apt/sources.list && \
+    echo "# For source package access, uncomment the following line" >> /etc/apt/sources.list && \
+    echo "# deb-src http://old.kali.org/kali moto main non-free contrib" >> /etc/apt/sources.list && \
+    apt-get update -y
+
 ###########################
 ##
 ##	LANGUAGES AND PACKAGE MANAGERS
@@ -80,8 +93,30 @@ RUN mkdir homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | 
 ##
 ###########################
 
-RUN apt-get install --no-install-recommends -y file && \
-	apt-get install --no-install-recommends -y zsh
+RUN apt-get install -y curl && \
+    apt-get install -y enum4linux && \
+    apt-get install -y feroxbuster && \
+    apt-get install --no-install-recommends -y file && \
+    apt-get install -y gobuster && \
+    apt-get install -y impacket-scripts && \
+    apt-get install -y nbtscan && \
+    apt-get install -y nikto && \
+    apt-get install -y nmap && \
+    apt-get install -y onesixtyone && \
+    apt-get install -y oscanner && \
+    apt-get install -y redis-tools && \
+    apt-get install -y seclists && \
+    apt-get install -y smbclient && \
+    apt-get install -y smbmap && \
+    apt-get install -y snmp && \
+    apt-get install -y sslscan && \
+    apt-get install -y sipvicious && \
+    apt-get install -y tnscmd10g && \
+    apt-get install -y whatweb && \
+    apt-get install -y wkhtmltopdf && \
+	apt-get install -y zsh
+
+RUN python3 -m pip install git+https://github.com/Tib3rius/AutoRecon.git
 
 ###########################
 ##
