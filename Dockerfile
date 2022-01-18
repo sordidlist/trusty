@@ -94,6 +94,7 @@ RUN mkdir homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | 
 ###########################
 
 RUN apt-get install -y curl && \
+    apt-get install -y dnsrecon && \
     apt-get install -y enum4linux && \
     apt-get install -y feroxbuster && \
     apt-get install --no-install-recommends -y file && \
