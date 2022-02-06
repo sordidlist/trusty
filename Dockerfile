@@ -79,6 +79,9 @@ RUN apt-get install -y python3-setuptools && \
 RUN apt-get install -y curl && \
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
+# GoLang
+RUN apt-get install -y golang-go
+
 # # Homebrew
 RUN mkdir homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
 
@@ -118,6 +121,8 @@ RUN apt-get install -y curl && \
 	apt-get install -y zsh
 
 RUN python3 -m pip install git+https://github.com/Tib3rius/AutoRecon.git
+
+RUN go install github.com/ropnop/kerbrute@latest
 
 ###########################
 ##
