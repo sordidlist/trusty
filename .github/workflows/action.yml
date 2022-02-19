@@ -1,3 +1,6 @@
 # action.yml
 name: 'Trusty'
 on: push
+jobs: 
+  test-ctf-container:
+    runs-on: ubuntu-latest
