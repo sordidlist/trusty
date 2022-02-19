@@ -6,4 +6,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build the container
-        run: pwd ; ls ; ls ../ ; docker build ../. --file Dockerfile -t ctf_image
+        run: ls trusty/ ; docker build trusty/ --file Dockerfile -t ctf_image
