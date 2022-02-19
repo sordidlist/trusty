@@ -6,4 +6,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build the container
-        run: docker build . -t ctf_image
+        run: docker build ../../. -t ctf_image
