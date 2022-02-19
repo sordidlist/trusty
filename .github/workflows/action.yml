@@ -1,6 +1,11 @@
 # action.yml
 name: 'Trusty'
-description: "Sordidlist's trusty ol ctf container"
-runs:
-  using: 'docker'
-  image: 'Dockerfile'
+on: push
+jobs: 
+  test-ctf-container:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Build the container
+        run: docker build . -t ctf_image
+        
