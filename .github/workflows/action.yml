@@ -1,6 +1,3 @@
 # action.yml
 name: 'Trusty'
-description: "Sordidlist's trusty ol ctf container"
-runs:
-  using: 'docker'
-  image: 'Dockerfile'
+on: push
