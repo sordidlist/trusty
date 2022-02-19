@@ -27,7 +27,7 @@ RUN rm -fR /var/lib/apt/ && \
     apt-get upgrade -y
 
 RUN apt-get install -y wget && \
-	wget -O kali-archive-keyring_2020.2_all.deb https://http.kali.org/kali/pool/main/k/kali-archive-keyring/kali-archive-keyring_2020.2_all.deb && \
+	wget -O kali-archive-keyring_2022.1_all.deb https://http.kali.org/kali/pool/main/k/kali-archive-keyring/kali-archive-keyring_2022.1_all.deb && \
 	apt-get update -y && \
 	apt-get upgrade -y 
 
