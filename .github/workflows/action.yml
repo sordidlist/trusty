@@ -4,3 +4,6 @@ on: push
 jobs: 
   test-ctf-container:
     runs-on: ubuntu-latest
+    steps:
+      - name: Build the container
+        run: echo Container built!
