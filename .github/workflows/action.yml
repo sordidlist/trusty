@@ -5,5 +5,7 @@ jobs:
   test-ctf-container:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v1
       - name: Build the container
-        run: ls .. ; pwd .. ; 
+        run: docker build . -t ctf_image
+        
