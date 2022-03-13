@@ -105,6 +105,7 @@ RUN apt-get install -y curl && \
     apt-get install -y gobuster && \
     apt-get install -y impacket-scripts && \
     apt-get install -y nbtscan && \
+    apt-get install -y netcat && \
     apt-get install -y nikto && \
     apt-get install -y nmap && \
     apt-get install -y onesixtyone && \
