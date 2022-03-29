@@ -64,7 +64,7 @@ RUN apt-get update -y && \
     python2 get-pip.py && \
     rm get-pip.py
 RUN apt-get install -y git && \
-	git clone git://github.com/kennethreitz/requests.git && \
+	git clone https://github.com/kennethreitz/requests.git && \
     cd requests && \
     python2 ./setup.py install && \
     cd ../ && \
