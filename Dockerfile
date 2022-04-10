@@ -107,6 +107,7 @@ RUN apt-get install -y curl && \
     apt-get install -y iputils-ping && \
     apt-get install -y nbtscan && \
     apt-get install -y netcat && \
+    apt-get install -y net-tools && \
     apt-get install -y nikto && \
     apt-get install -y nmap && \
     apt-get install -y onesixtyone && \
